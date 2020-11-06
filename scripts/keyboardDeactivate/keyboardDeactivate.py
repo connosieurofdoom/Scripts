@@ -1,5 +1,5 @@
 import re
-
+import time
 import subprocess
 
 out = subprocess.check_output(['xinput', 'list'], shell= True).strip()
@@ -9,12 +9,19 @@ for line in out.splitlines():
 
 t = input("Enter id:")
 
-out = subprocess.check_output(['xinput', 'float', t], shell= True).strip()
+try:
+    subprocess.check_call('xinput float {}'.format(t), shell= True)
+    out = subprocess.check_output(['xinput', 'list'], shell= True).strip()
+    for line in out.splitlines():
+        
+        print(line.decode())
 
-for line in out.splitlines():
-    
-    print(line.decode())
+except Exception as e:
+    print('\n',e,'\n',"Exiting in 5 seconds")
+    time.sleep(5)
 
-import time
+
+
+
 
 time.sleep(5)
