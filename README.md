@@ -60,6 +60,7 @@ Number of Semester:4
 
 1. Version 1:
     * File Name: Scripts/DirectoryTreePrint/directory_tree_print.py  
+    * Created By: https://stackoverflow.com/users/1226857/dhobbs
     * Input Parameters: startpath (Path of the root directory from which tree is to be displayed.)
     * Sample Usage:
     ```
@@ -82,6 +83,7 @@ Number of Semester:4
     ```
 2. Version 2:
     * File Name: Scripts/DirectoryTreePrint/directory_tree_print_extended.py
+    * Created By: https://stackoverflow.com/users/2479038/abstrus
     * Sample Usage:
     ```
     paths = DisplayablePath.make_tree(Path(''))
