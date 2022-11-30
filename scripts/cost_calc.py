@@ -41,3 +41,6 @@ def conv(val):
         
     except:
         print("Not yay")
+
+
+# print(conv(8511.21))
